@@ -1,0 +1,19 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display deployment info
+        run: |
+          echo "Terraform + Ansible deployment"
+          echo "Deployment triggered by push to GitHub"
